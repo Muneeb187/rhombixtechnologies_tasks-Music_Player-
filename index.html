@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#000">
+
+  <!-- icon -->
+  
+  <link rel="icon" href="images/sound.png" >
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+
+  <nav class="top-nav">
+    
+    <div class="nav-left">
+      <img src="images/sound.png" alt="icon" class="nav-icon">
+      <span class="site-title">Music Player</span>
+    </div>
+    
+    <div class="nav-right">
+      <a href="#">Home</a>
+      <a href="#playlist">Playlist</a>
+    </div>
+  
+  </nav>
+
+  <!-- playlist -->
+
+  <main class="player-container">
+
+    <audio id="audio" preload="metadata"></audio>
+    
+    <section class="left">
+      <h2 id="playlist">Playlist</h2>
+      <ul id="song-list" class="song-list"></ul>
+      <label class="upload">
+        <input type="file" id="file-input" multiple accept="audio/*">
+        + Add files
+      </label>
+
+    </section>
+
+    <!-- song section -->
+
+    <section class="right">
+      
+      <div class="now-playing">
+      
+        <img id="song-img" src="images/karan.jpeg" alt="song img">
+      
+        <div class="song-info">
+          <h3 id="title">Title</h3>
+          <p id="artist">Artist</p>
+        </div>
+    
+      </div>
+
+
+      
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play">▶</button>
+        <button id="next">⏭</button>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7" title="Volume">
+      </div>
+
+      <!-- seekbar -->
+
+      <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" min="0" max="100" value="0">
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
